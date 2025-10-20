@@ -1,6 +1,16 @@
 import Image from "next/image";
-import Menu from "../menu";
 
 export default function Home() {
-  return <div className="text-4xl">{Menu()}BLOG</div>;
+  return (
+    <div>
+      <h1 className="text-4xl">BLOG</h1>
+
+      <div className="flex gap-4 flex-wrap items-baseline">
+        <Image src={"/foto1.avif"} width={100} height={100} alt="foto1" />
+        <Image src={"/foto2.avif"} width={100} height={100} alt="foto2" />
+        <Image src={"/paisaje1.jpg"} width={500} height={500} alt="paisaje1" />
+        <Image src={"/paisaje2.jpg"} width={500} height={500} alt="paisaje2" />
+      </div>
+    </div>
+  );
 }

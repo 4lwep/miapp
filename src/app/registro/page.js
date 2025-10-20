@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Menu from "../menu";
-
 export default function Home() {
-  return <div className="text-4xl">{Menu()}REGISTRO</div>;
+  return <div className="text-4xl">REGISTRO</div>;
 }

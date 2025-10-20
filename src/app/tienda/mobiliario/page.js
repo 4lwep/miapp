@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Menu from "@/app/menu";
-
 export default function Home() {
-  return <div className="text-4xl">{Menu()}TIENDA DE MOBILIARIO</div>;
+  return <div className="text-4xl">TIENDA DE MOBILIARIO</div>;
 }

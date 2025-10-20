@@ -1,15 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist } from "next/font/google";
+import "@/app/globals.css";
+import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Mi primera app",
@@ -19,27 +12,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <nav className="text-4xl">
-          <div className="text-xl bg-blue-400 menu">
-            <a href="/">INICIO</a>
-            <a href="" className="tienda">
-              TIENDA
-            </a>
-            <a href="/blog">BLOG</a>
-            <a href="/acerca">ACERCA</a>
-            <a href="/registro">REGISTRO</a>
-          </div>
-          <div className="text-xl bg-blue-400 menu submenu">
-            <a href="/tienda/decoracion">DECORACIÓN</a>
-            <a href="/tienda/electronica">ELECTRÓNICA</a>
-            <a href="/tienda/libros">LIBROS</a>
-            <a href="/tienda/mobiliario">MOBILIARIO</a>
-          </div>
+      <body className={geistSans.className + " antialiased min-h-screen"}>
+        <nav className="text-xl bg-blue-300 p-4 flex justify-between miclase">
+          <Link href="/">INICIO</Link>
+          <Link href="/tienda">TIENDA</Link>
+          <Link href="/blog">BLOG</Link>
+          <Link href="/acerca">ACERCA DE</Link>
+          <Link href="/registro">REGISTRO</Link>
         </nav>
-        {children}
+        <div className="p-4">{children}</div>
       </body>
     </html>
   );

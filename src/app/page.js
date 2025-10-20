@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Menu from "./menu";
+import Link from "next/link";
 
 export default function Home() {
-  return <div className="text-4xl">{Menu()} INICIO</div>;
+  return <div className="text-4xl">INICIO</div>;
 }
